@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Web Development Objectives</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Web Development Practice</h1>
+    <p>Learn and build interactive UI components</p>
+  </header>
+  <main>
+    <nav>
+      <button onclick="showSection('formSection')">Contact Form</button>
+      <button onclick="showSection('gridSection')">Responsive Layout</button>
+      <button onclick="showSection('todoSection')">To-Do List</button>
+      <button onclick="showSection('gallerySection')">Image Gallery</button>
+    </nav>
+
+    <!-- Contact Form -->
+    <section id="formSection">
+      <h2>Contact Form</h2>
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="email" id="email" placeholder="Your Email" required />
+        <button type="submit">Submit</button>
+      </form>
+      <div class="confirmation" id="confirmationMessage">✅ Thank you! We will reach out to you soon.</div>
+      <div class="user-info" id="userDetails"></div>
+    </section>
+
+    <!-- Responsive Layout -->
+    <section id="gridSection">
+      <h2>Responsive Layout</h2>
+      <p>This layout adjusts across screen sizes. Learn about core technologies:</p>
+      <div class="grid-layout">
+        <div class="grid-item">
+          <h3>HTML</h3>
+          <p>Structures content using tags like headings, paragraphs, links, and images.</p>
+        </div>
+        <div class="grid-item">
+          <h3>CSS</h3>
+          <p>Styles your content: layout, color, typography, animations, and responsiveness.</p>
+        </div>
+        <div class="grid-item">
+          <h3>JavaScript</h3>
+          <p>Adds interactivity: forms, dynamic content, real-time updates, and more.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- To-Do List -->
+    <section id="todoSection">
+      <h2>To-Do List</h2>
+      <input type="text" id="todoInput" placeholder="Add a task...">
+      <button onclick="addTask()">Add Task</button>
+      <ul id="todoList" class="todo-list"></ul>
+    </section>
+
+    <!-- Image Gallery -->
+    <section id="gallerySection">
+      <h2>Image Gallery</h2>
+      <p>Click on any image to view it larger:</p>
+      <div class="gallery">
+        <img src="https://thumbs.dreamstime.com/z/html-code-dark-background-colorful-html-code-as-abstract-computer-programming-concept-vector-illustration-155503891.jpg" alt="Code">
+        <img src="https://th.bing.com/th/id/OIP.jObaSN3cLBxsl2AKGpY14gHaD4?rs=1&pid=ImgDetMain" alt="HTML">
+        <img src="https://thumbs.dreamstime.com/z/html-css-abstract-concept-blue-text-background-96280512.jpg" alt="CSS">
+        <img src="https://th.bing.com/th/id/OIP.ki8mRiKpOjICkDXET1otUAHaHa?rs=1&pid=ImgDetMain" alt="JavaScript">
+        <img src="https://th.bing.com/th/id/OIP.1025cxIEjULEPDPp30qMcQHaHa?rs=1&pid=ImgDetMain" alt="UI">
+        <img src="https://wallpapercave.com/wp/wp5769546.jpg" alt="Laptop">
+      </div>
+    </section>
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <img id="lightboxImg" src="" alt="Expanded">
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Web Development Project. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
